@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+
+    --color-primary: #0073b1;
+    --color-secondary: #0092cf;
+}
+
+.cv-slider {
+    padding: 50px !important;
+
+    /* &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 50%;
+        height: 80%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(90deg, #0073b1, transparent);
+        z-index: 5;
+    } */
+}
+
+.animated-border-box,
+.animated-border-box-glow {
+    width: 35%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    z-index: 0;
+    border-radius: 50px;
+}
+
+.animated-border-box-glow {
+    overflow: hidden;
+    filter: blur(20px);
+}
+
+.animated-border-box:before,
+.animated-border-box-glow:before {
+    content: "";
+    z-index: -2;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    position: absolute;
+    width: 99999px;
+    height: 99999px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: conic-gradient(
+        rgba(0, 0, 0, 0),
+        #fff,
+        rgba(0, 0, 0, 0) 25%
+    );
+    animation: rotate 4s linear infinite;
+}
+
+.animated-border-box:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 4px;
+    top: 4px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    background: #fff;
+    border-radius: 50px;
+}
+
+@keyframes rotate {
+    100% {
+        transform: translate(-50%, -50%) rotate(1turn);
+    }
+}
+
+.swiper-slide {
+    display: flex !important;
+    height: initial !important;
+
+    div {
+        box-shadow: 0 10px 13px #00000026, 0 17px 17px #00000021,
+            0 28px 20px #00000014, 0 44px 22px #00000005, 0 64px 24px #0000,
+            0 0 0 5px #01213921, 0 0 0 4px #0092cf, 0 0 0 1px #01213921;
+    }
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+    background: #fff !important;
+}
