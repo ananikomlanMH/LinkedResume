@@ -41,13 +41,13 @@
                 </p>
             </div>
             
-            <div>
+            <div class="px-5">
                 <form action="" method="get" class="relative">
                     @csrf
 
                     <div>
-                        <div class="animated-border-box-glow"></div>
-                        <div class="animated-border-box">
+                        <div class="animated-border-box-glow w-full sm:w-xl"></div>
+                        <div class="animated-border-box w-full sm:w-xl">
                             <div class="relative">
                                 <input type="text" name="profil" placeholder="https://www.linkedin.com/in/..." class="w-full bg-white/[0.1] p-4 border rounded-full outline-none border-none text-primary">
                                 <button class="text-primary absolute top-1/2 -translate-y-1/2 right-2 p-2.5 bg-white rounded-full cursor-pointer text-xs">
@@ -79,10 +79,10 @@
         </div>
     </div>
 
-    <footer class="absolute bottom-1 left-1/2 -translate-x-1/2 w-full flex justify-between items-center border-t border-white/[0.1] py-2 px-3 text-white text-xs">
+    <footer class="absolute bottom-1 left-1/2 -translate-x-1/2 w-full flex flex-col sm:flex-row justify-between sm:items-center border-t border-white/[0.1] py-2 px-3 text-white text-xs">
         <div class="flex items-center gap-2">
-            <div class="flex items-center gap-1"><svg class="text-icon size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
-                </svg><span>LinkedResume © {{ date('Y') }}</span></div><span> · </span>
+            <div class="flex items-center gap-1">
+            <span>LinkedResume © {{ date('Y') }}</span></div><span> · </span>
             <div class="flex items-center gap-1"><span class="rounded-sm font-[Instrument_Serif] italic">Crafted by Anani Komlan Mawulom H</span></div>
         </div>
         <div class="flex items-center gap-4">

@@ -32,7 +32,6 @@
 
 .animated-border-box,
 .animated-border-box-glow {
-    width: 35%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);

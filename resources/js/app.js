@@ -5,7 +5,7 @@ import "swiper/css/bundle";
 
 document.addEventListener('DOMContentLoaded', function() {
     const swiper = new Swiper('.cv-slider', {
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 20,
         grabCursor: true,
         loop: true,
